@@ -10,7 +10,6 @@ alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
 //console.log('greeting',greetUser);
 */
 
-/*
 //where was I born?
   var birthPlace = prompt("Was I born in India? Please answer yes/no");
   birthPlace = birthPlace.toLowerCase();
@@ -21,4 +20,4 @@ alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
     //console.log("You are wrong!!! I was born in India");
     alert("You are wrong!!! I was born in India");
   }
-*/
+
