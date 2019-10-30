@@ -53,7 +53,7 @@ if (volunTeering === 'yes' || volunTeering === 'y') {
   alert("You are right!")
 } else {
   //console.log("You are wrong!!!");
-  alert("You are wrong!!! I adopted our dog first before having kids.");
+  alert("You are wrong!!! I volunteer at our local temple every month and on special occasions.");
 }
 
 //can I write/read Arabic?
@@ -64,7 +64,7 @@ if (langArabic === 'yes' || langArabic === 'y') {
   alert("You are right!")
 } else {
   //console.log("You are wrong!!!");
-  alert("You are wrong!!! I adopted our dog first before having kids.");
+  alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
 }
 
 alert("Thank you for playing this game," + askName);
