@@ -34,3 +34,37 @@ if (medTraining === 'yes' || medTraining === 'y') {
   alert("You are wrong!!! I attended medical school in New Zealand!");
 }
 
+//did I have my dog first?
+var dogFirst = prompt("Did I have my dog first? Please answer in yes/no");
+dogFirst = dogFirst.toLowerCase();
+if (dogFirst === 'yes' || dogFirst === 'y') {
+  //console.log("You are right!");
+  alert("You are right!")
+} else {
+  //console.log("You are wrong!!!");
+  alert("You are wrong!!! I adopted our dog first before having kids.");
+}
+
+//do I enjoy volunteering?
+var volunTeering = prompt("Do I enjoy volunteering? Please answer in yes/no");
+volunTeering = volunTeering.toLowerCase();
+if (volunTeering === 'yes' || volunTeering === 'y') {
+  //console.log("You are right!");
+  alert("You are right!")
+} else {
+  //console.log("You are wrong!!!");
+  alert("You are wrong!!! I adopted our dog first before having kids.");
+}
+
+//can I write/read Arabic?
+var langArabic = prompt("Can I read/write Arabic? Please answer in yes/no");
+langArabic = langArabic.toLowerCase();
+if (langArabic === 'yes' || langArabic === 'y') {
+  //console.log("You are right!");
+  alert("You are right!")
+} else {
+  //console.log("You are wrong!!!");
+  alert("You are wrong!!! I adopted our dog first before having kids.");
+}
+
+alert("Thank you for playing this game," + askName);
