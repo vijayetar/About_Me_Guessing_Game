@@ -11,8 +11,6 @@ Prompt the user a total of exactly **five yes or no questions**. The user input 
 
 **As a user, I would like a personalized welcome message so that I feel like I am interacting with the site owner.**
 
-Ask the user their name through a prompt()
-
 Display that name back to the user through a custom greeting welcoming them to your site.
 
 Display the user’s name back to them in your final message to the user.
@@ -20,7 +18,7 @@ Display the user’s name back to them in your final message to the user.
 Developer Style Guide
 A style guide is a series of standards and practices that must be followed in order for your code to be accepted by the team. This can include variable naming, file structure, and process. Below is a list of practices that you will be required to follow within this lab:
 
-**Your JS file must contain a 'use strict' declaration at the top, and your javascript file must be linked in your html file as an external script file.**
+Your JS file must contain a 'use strict' declaration at the top, and your javascript file must be linked in your html file as an external script file.
 
 Make sure that all code is **cleanly written with correct indentation and syntax**. Look at examples online and in your textbook. Note that your JS must pass the rules in the linter that we installed.
 
