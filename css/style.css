@@ -1,6 +1,16 @@
+h1{
+  font-family: cursive;
+  font-size: 35px;
+  background-color: rosybrown;
+}
+
 body {
   background-color: aquamarine;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rebeccapurple;
-  font-size: 23px;
+  font-size: 25px;
+
+}
+div {
+  color: rgb(250,150,130);
 }
