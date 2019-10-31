@@ -18,14 +18,14 @@ h1{
   font-size: 45px;
   text-align: center;
   background-color: rosybrown;
-  border: 10px double rgb(17, 14, 20);)
-  padding: 50px;
-  margin: 20px auto 20px auto;
+  border: 10px double rgb(17, 14, 20);
+  padding: 30px;
+  margin: 20px auto 10px auto;
   border-radius: 15px;
-  width: 70%;
+  width: 80%;
 }
 p{
   overflow: scroll;
   text-align: left;
-  padding: 30px;
+  padding: 50px;
 }
