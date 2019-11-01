@@ -74,9 +74,16 @@ for (var i = 0; i < 4; i++) {
     alert("You are right!"); break;
   }
   else {
-    var a = 3 - i;
-    alert("Guess again! You have " + a + 'attempts remaining!');
-    //console.log( 'attempt number', i);
+
+    if (pickNumber <13) {
+      var a = 3 - i;
+      //console.log( 'attempt number', i);
+      alert("Too Low! Try Again!! You have " + a + 'attempts remaining!');
+    }
+    else {
+      var a = 3 - i;
+      alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
+    }
 
   }
 
