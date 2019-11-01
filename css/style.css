@@ -31,7 +31,7 @@ p {
 }
 h3 {
   font-family: cursive;
-  font-size:25px;
+  font-size:35px;
   text-align: left;
   padding: 30px;
   margin: 20px;
@@ -42,12 +42,17 @@ div {
   font-family: monospace;
   font-size: 25px;
   width: 50%;
-  margin: 20px auto; 20px auto;
+  margin: 30px auto; 30px auto;
   text-align: left;
   border: black 1px;
   display:inline-block;
   float: left;
 
+}
+ul {
+  list-style-type: circle;
+}
+ol {
+  list-style-position: outside;
 
 }
-
