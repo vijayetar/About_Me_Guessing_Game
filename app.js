@@ -9,7 +9,7 @@ askName = prompt("What is your name?");
 alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
 //console.log('greeting',greetUser);
 
-/*
+
 //question 1: where was I born?
   var birthPlace = prompt("Was I born in India? Please answer yes/no");
   console.log('Was I born in India? ', birthPlace);
@@ -94,7 +94,7 @@ for (var i = 0; i < 4; i++) {
 
 
 }
-*/
+
 //question 7: adding question with array and a loop of 6 attempts, display all the right answers, 
 var potterHarry = ['potter series', 'harry potter books', 'jk rowling', 'magical', 'magic', 'mystery', 'rowling'];
 
