@@ -61,8 +61,6 @@ if (langArabic === 'yes' || langArabic === 'y') {
   alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
 }
 
-*/
-
 //question 6: guess a number in four attempts only
 for (var i = 0; i < 4; i++) {
 
@@ -76,7 +74,7 @@ for (var i = 0; i < 4; i++) {
   }
   else {
     if (i === 3) {
-      console.log('what is i:', i);
+      //console.log('what is i:', i);
       alert( 'I have lived in 13 different homes.');
 
     } else {
@@ -95,4 +93,26 @@ for (var i = 0; i < 4; i++) {
   }
 
 
+}
+*/
+//question 7: adding question with array and a loop of 6 attempts, display all the right answers, 
+var potterHarry = ['potter series', 'harry potter books', 'jk rowling', 'magical', 'magic', 'mystery', 'rowling'];
+
+for (var a = 0; a < 6; a++) {
+  var guessBook = prompt('What type of books do I like?');
+  guessBook = guessBook.toLowerCase();
+
+  //console.log('potterHarry', potterHarry);
+
+  for (var i = 0; i < potterHarry.length; i++) {
+
+    if (guessBook === potterHarry[i]) {
+      //console.log('You are right!'); 
+      alert('You are right!');
+      a = 6;
+      
+    }
+
+  }
+  alert('Try again!');
 }
