@@ -9,7 +9,7 @@ askName = prompt("What is your name?");
 alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
 //console.log('greeting',greetUser);
 
-
+/*
 //question 1: where was I born?
   var birthPlace = prompt("Was I born in India? Please answer yes/no");
   console.log('Was I born in India? ', birthPlace);
@@ -61,6 +61,7 @@ if (langArabic === 'yes' || langArabic === 'y') {
   alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
 }
 
+*/
 
 //question 6: guess a number in four attempts only
 for (var i = 0; i < 4; i++) {
@@ -74,17 +75,24 @@ for (var i = 0; i < 4; i++) {
     alert("You are right!"); break;
   }
   else {
+    if (i === 3) {
+      console.log('what is i:', i);
+      alert( 'I have lived in 13 different homes.');
 
-    if (pickNumber <13) {
-      var a = 3 - i;
-      //console.log( 'attempt number', i);
-      alert("Too Low! Try Again!! You have " + a + 'attempts remaining!');
-    }
-    else {
-      var a = 3 - i;
-      alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
+    } else {
+
+      if (pickNumber <13) {
+        var a = 3 - i;
+        //console.log( 'attempt number', i);
+        alert("Too Low! Try Again!! You have " + a + 'attempts remaining!');
+      }
+      else {
+        var a = 3 - i;
+        alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
+      }  
     }
 
   }
+
 
 }
