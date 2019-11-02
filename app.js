@@ -1,5 +1,7 @@
 "use strict";
 
+var totalScore;
+
 getName();
 birthCountry();
 myTraining();
@@ -206,9 +208,12 @@ function favouriteBook() {
 
 
 //display the percentage score
-function percent() { 
-  var math = Math.round(totalScore/7*100);
-  alert("your percentage is " + math);
+function math() { 
+  var percent = Math.round(totalScore/7*100);
+ // alert("your percentage is " + math);
+ console.log(percent);
+  //return percent;
 }
-percent();
+//var score = math();
+//alert('You percent is ' + score);
 
