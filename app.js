@@ -9,16 +9,16 @@ askName = prompt("What is your name?");
 alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
 //console.log('greeting',greetUser);
 
-
+/*
 //question 1: where was I born?
-  var birthPlace = prompt("Was I born in India? Please answer yes/no");
-  console.log('Was I born in India? ', birthPlace);
-  birthPlace = birthPlace.toLowerCase();
-  if (birthPlace ==='yes'||birthPlace ==='y') {
-    alert("You are right!")
-  } else {
-    alert("You are wrong!!! I was born in India");
-  }
+var birthPlace = prompt("Was I born in India? Please answer yes/no");
+console.log('Was I born in India? ', birthPlace);
+birthPlace = birthPlace.toLowerCase();
+if (birthPlace === 'yes' || birthPlace === 'y') {
+  alert("You are right!")
+} else {
+  alert("You are wrong!!! I was born in India");
+}
 
 
 //question 2: where did I do my medical training?
@@ -51,6 +51,7 @@ if (volunTeering === 'yes' || volunTeering === 'y') {
   alert("You are wrong!!! I volunteer at our local temple every month and on special occasions.");
 }
 
+
 //question 5: can I write/read Arabic?
 var langArabic = prompt("Can I read/write Arabic? Please answer in yes/no");
 console.log('Can I read/write Arabic? ', langArabic);
@@ -60,6 +61,7 @@ if (langArabic === 'yes' || langArabic === 'y') {
 } else {
   alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
 }
+
 
 //question 6: guess a number in four attempts only
 for (var i = 0; i < 4; i++) {
@@ -75,11 +77,11 @@ for (var i = 0; i < 4; i++) {
   else {
     if (i === 3) {
       //console.log('what is i:', i);
-      alert( 'I have lived in 13 different homes.');
+      alert('You are out of attempts! I have lived in 13 different homes.');
 
     } else {
 
-      if (pickNumber <13) {
+      if (pickNumber < 13) {
         var a = 3 - i;
         //console.log( 'attempt number', i);
         alert("Too Low! Try Again!! You have " + a + 'attempts remaining!');
@@ -87,7 +89,7 @@ for (var i = 0; i < 4; i++) {
       else {
         var a = 3 - i;
         alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
-      }  
+      }
     }
 
   }
@@ -95,24 +97,38 @@ for (var i = 0; i < 4; i++) {
 
 }
 
-//question 7: adding question with array and a loop of 6 attempts, display all the right answers, 
+*/
+
+//question 7: adding question with array and a loop of 6 attempts, display all the right answers,
+
 var potterHarry = ['potter series', 'harry potter books', 'jk rowling', 'magical', 'magic', 'mystery', 'rowling'];
+
 
 for (var a = 0; a < 6; a++) {
   var guessBook = prompt('What type of books do I like?');
   guessBook = guessBook.toLowerCase();
-
+  
   //console.log('potterHarry', potterHarry);
-
+  
   for (var i = 0; i < potterHarry.length; i++) {
-
+    
     if (guessBook === potterHarry[i]) {
-      //console.log('You are right!'); 
-      alert('You are right!');
-      a = 6;
+      //console.log('You are right!');
+      alert('You are right!'); a = 6;
       
     }
-
+    
   }
-  alert('Try again!');
+  if (a < 6) {
+    var count = 5 - a
+    alert('Try again!!!! You have ' + count + ' attempts remaining');
+  } else {
+    alert('Well done!!! My favorite books are: ');
+    for (var i = 0; i < potterHarry.length; i++) {
+      var favBook = ''
+      favBook = favBook + potterHarry[i];
+      alert(favBook);
+    }
+  }
+
 }
