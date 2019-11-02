@@ -6,16 +6,17 @@ askName = prompt("What is your name?");
 //console.log('user Name', askName);
 
 //greet User
-alert("Hi there, " + askName + "! Welcome to the Guessing Game!");
+alert("Hi there, " + askName + "! Welcome to the Guessing Game! You have to answer 7 questions right to get total Score of 7 ");
 //console.log('greeting',greetUser);
 
-/*
+var totalScore = 0;
+
 //question 1: where was I born?
 var birthPlace = prompt("Was I born in India? Please answer yes/no");
 console.log('Was I born in India? ', birthPlace);
 birthPlace = birthPlace.toLowerCase();
 if (birthPlace === 'yes' || birthPlace === 'y') {
-  alert("You are right!")
+  alert("You are right!"); totalScore = totalScore + 1;
 } else {
   alert("You are wrong!!! I was born in India");
 }
@@ -26,17 +27,17 @@ var medTraining = prompt("Did I attend medical school in New Zealand? Please ans
 console.log('Did I attend Medical School in NZ? ', medTraining);
 medTraining = medTraining.toLowerCase();
 if (medTraining === 'yes' || medTraining === 'y') {
-  alert("You are right!")
+  alert("You are right!"); totalScore = totalScore + 1;
 } else {
   alert("You are wrong!!! I attended medical school in New Zealand!");
 }
 
 //question 3: did I have my dog first?
-var dogFirst = prompt("Did I have my dog before I had my kids? Please answer in yes/no");
-console.log('Did I have my dog before kids? ', dogFirst);
+var dogFirst = prompt("Did I adopt my dog before I had my kids? Please answer in yes/no");
+console.log('Did I adopt my dog before I had my kids? ', dogFirst);
 dogFirst = dogFirst.toLowerCase();
 if (dogFirst === 'yes' || dogFirst === 'y') {
-  alert("You are right!")
+  alert("You are right!"); totalScore = totalScore + 1;
 } else {
   alert("You are wrong!!! I adopted our dog before having kids.");
 }
@@ -46,7 +47,7 @@ var volunTeering = prompt("Do I enjoy volunteering? Please answer in yes/no");
 console.log('Do I enjoy volunteering? ', volunTeering);
 volunTeering = volunTeering.toLowerCase();
 if (volunTeering === 'yes' || volunTeering === 'y') {
-  alert("You are right!")
+  alert("You are right!"); totalScore = totalScore + 1;
 } else {
   alert("You are wrong!!! I volunteer at our local temple every month and on special occasions.");
 }
@@ -57,7 +58,7 @@ var langArabic = prompt("Can I read/write Arabic? Please answer in yes/no");
 console.log('Can I read/write Arabic? ', langArabic);
 langArabic = langArabic.toLowerCase();
 if (langArabic === 'yes' || langArabic === 'y') {
-  alert("You are right!")
+  alert("You are right!"); totalScore = totalScore + 1;
 } else {
   alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
 }
@@ -72,7 +73,7 @@ for (var i = 0; i < 4; i++) {
 
   if (pickNumber === '13') {
     //console.log('pickNumber', pickNumber);
-    alert("You are right!"); break;
+    alert("You are right!"); totalScore = totalScore + 1; i = 4;
   }
   else {
     if (i === 3) {
@@ -96,9 +97,6 @@ for (var i = 0; i < 4; i++) {
 
 
 }
-
-*/
-
 //question 7: adding question with array and a loop of 6 attempts, display all the right answers,
 
 var potterHarry = ['potter series', 'harry potter books', 'jk rowling', 'magical', 'magic', 'mystery', 'rowling'];
@@ -107,28 +105,30 @@ var potterHarry = ['potter series', 'harry potter books', 'jk rowling', 'magical
 for (var a = 0; a < 6; a++) {
   var guessBook = prompt('What type of books do I like?');
   guessBook = guessBook.toLowerCase();
-  
-  //console.log('potterHarry', potterHarry);
-  
+
+  console.log('What type of books I like: ', guess.Book);
+
   for (var i = 0; i < potterHarry.length; i++) {
-    
+
     if (guessBook === potterHarry[i]) {
       //console.log('You are right!');
+      totalScore = totalScore + 1;
       alert('You are right!'); a = 6;
-      
+
     }
-    
+
   }
   if (a < 6) {
     var count = 5 - a
     alert('Try again!!!! You have ' + count + ' attempts remaining');
   } else {
-    alert('Well done!!! My favorite books are: ');
-    for (var i = 0; i < potterHarry.length; i++) {
-      var favBook = ''
-      favBook = favBook + potterHarry[i];
-      alert(favBook);
-    }
+    alert('Well done!!! ');
   }
-
 }
+for (var i = 0; i < potterHarry.length; i++) {
+  var favBook = '';
+  favBook = favBook + potterHarry[i];
+  console.log("My favorite book is" + favBook);
+}
+
+alert('Your total Score is : ' + totalScore + ' out of 7');
