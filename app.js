@@ -10,6 +10,7 @@ hobBy();
 lanGuage();
 guessNumber();
 favouriteBook();
+scorePercent();
 
 //function get User name
 function getName() {
@@ -22,7 +23,6 @@ function getName() {
   
   //console.log('greeting',greetUser);
   
-  var totalScore = 0;
 }
 
 
@@ -36,6 +36,7 @@ function birthCountry() {
   if (birthPlace === 'yes' || birthPlace === 'y') {
     alert("You are right!"); 
     totalScore = totalScore + 1;
+    return totalScore;
   
   } else {
     alert("You are wrong!!! I was born in India");
@@ -55,6 +56,7 @@ function myTraining() {
   if (medTraining === 'yes' || medTraining === 'y') {
     alert("You are right!"); 
     totalScore = totalScore + 1;
+    return totalScore;
   
   } else {
     alert("You are wrong!!! I attended medical school in New Zealand!");
@@ -74,6 +76,7 @@ function whenDog() {
   if (dogFirst === 'yes' || dogFirst === 'y') {
     alert("You are right!"); 
     totalScore = totalScore + 1;
+    return totalScore;
   
   } else {
     alert("You are wrong!!! I adopted our dog before having kids.");
@@ -95,6 +98,7 @@ function hobBy() {
   if (volunTeering === 'yes' || volunTeering === 'y') {
     alert("You are right!"); 
     totalScore = totalScore + 1;
+    return totalScore;
   
   } else {
     alert("You are wrong!!! I volunteer at our local temple every month and on special occasions.");
@@ -115,6 +119,7 @@ function lanGuage() {
   if (langArabic === 'yes' || langArabic === 'y') {
     alert("You are right!"); 
     totalScore = totalScore + 1;
+    return totalScore;
   
   } else {
     alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
@@ -138,6 +143,7 @@ function guessNumber() {
       alert("You are right!"); 
       totalScore = totalScore + 1; 
       i = 4;
+      return totalScore;
   
     } else {
       //kept check of the number of attempts using variable i
@@ -182,6 +188,7 @@ function favouriteBook() {
         totalScore = totalScore + 1;
         alert('You are right!'); 
         a = 6;
+        return totalScore;
   
       }
   
@@ -208,12 +215,11 @@ function favouriteBook() {
 
 
 //display the percentage score
-function math() { 
-  var percent = Math.round(totalScore/7*100);
+function scorePercent() { 
+  var percent = totalScore/7*100 ;
  // alert("your percentage is " + math);
- console.log(percent);
+ console.log(totalScore);
+ alert('You percent is ' + percent);
   //return percent;
 }
-//var score = math();
-//alert('You percent is ' + score);
 
