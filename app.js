@@ -1,10 +1,14 @@
 "use strict";
 
-var totalScore;
+//define variables needed to score our game
+var totalScore = 0;
+var count = 0;
+
 
 //function get User name
+var askName;
+
 function getName() {
-  var askName;
   askName = prompt("What is your name?");
   //console.log('user Name', askName);
   
@@ -12,9 +16,9 @@ function getName() {
   alert("Hi there, " + askName + "! Welcome to the Guessing Game! You have to answer 7 questions right to get total Score of 7 ");
   
   //console.log('greeting',greetUser);
+  return askName;
   
 }
-
 getName();
 
 
@@ -27,17 +31,26 @@ function birthCountry() {
   
   if (birthPlace === 'yes' || birthPlace === 'y') {
     alert("You are right!"); 
-    totalScore = totalScore + 1;
-    return totalScore;
+    count = 1;
+    return count;
   
   } else {
     alert("You are wrong!!! I was born in India");
+    count = 0;
+    return count;
   }
+
 }
 
 birthCountry();
 
+totalScore = totalScore + count;
+
+// console.log('QUESTION ONE TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
+
+
 //function question 2: where did I do my medical training?
+
 function myTraining() {
 
   var medTraining = prompt("Did I attend medical school in New Zealand? Please answer in yes/no");
@@ -48,15 +61,23 @@ function myTraining() {
   
   if (medTraining === 'yes' || medTraining === 'y') {
     alert("You are right!"); 
-    totalScore = totalScore + 1;
-    return totalScore;
+    count = 1;
+    return count;
   
   } else {
     alert("You are wrong!!! I attended medical school in New Zealand!");
+    count = 0;
+    return count;
   }
 
 }
+
 myTraining();
+
+totalScore = totalScore + count;
+
+// console.log('QUESTION TWO TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
+
 
 //function question 3: did I have my dog first?
 function whenDog() {
@@ -68,16 +89,24 @@ function whenDog() {
   
   if (dogFirst === 'yes' || dogFirst === 'y') {
     alert("You are right!"); 
-    totalScore = totalScore + 1;
-    return totalScore;
+    count = 1;
+    return count;
+
   
   } else {
     alert("You are wrong!!! I adopted our dog before having kids.");
+    count = 0;
+    return count;
+
   }
 
 }
 
 whenDog();
+
+totalScore = totalScore + count;
+
+// console.log('QUESTION THREE TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
 
 
 //function question 4: do I enjoy volunteering?
@@ -92,15 +121,26 @@ function hobBy() {
   
   if (volunTeering === 'yes' || volunTeering === 'y') {
     alert("You are right!"); 
-    totalScore = totalScore + 1;
-    return totalScore;
+    count = 1;
+    return count;
   
   } else {
     alert("You are wrong!!! I volunteer at our local temple every month and on special occasions.");
+    count = 0;
+    return count;
+
   }
 
 }
+
+
 hobBy();
+
+totalScore = totalScore + count;
+
+// console.log('QUESTION FOUR TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
+
+
 
 //function question 5: can I write/read Arabic?
 
@@ -113,15 +153,24 @@ function lanGuage() {
   
   if (langArabic === 'yes' || langArabic === 'y') {
     alert("You are right!"); 
-    totalScore = totalScore + 1;
-    return totalScore;
+    count = 1;
+    return count;
   
   } else {
     alert("You are wrong!!! I I can read/write Arabic. I am not very fluent in it.");
+    count = 0;
+    return count;
+
   }
 
 }
+
 lanGuage();
+
+totalScore = totalScore + count;
+
+// console.log('QUESTION FIVE TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
+
 
 //function question 6: guess a number in four attempts only
 
@@ -136,9 +185,10 @@ function guessNumber() {
     if (pickNumber === '13') {
       //console.log('pickNumber', pickNumber);
       alert("You are right!"); 
-      totalScore = totalScore + 1; 
       i = 4;
-      return totalScore;
+      count = 1;
+      return count;
+  ;
   
     } else {
       //kept check of the number of attempts using variable i
@@ -146,6 +196,9 @@ function guessNumber() {
       if (i === 3) {
         //console.log('what is i:', i);
         alert('You are out of attempts! I have lived in 13 different homes.');
+        count = 0;
+        return count;
+    
       } else {
   
         if (pickNumber < 13) {
@@ -163,15 +216,23 @@ function guessNumber() {
   }
 
 }
+
+
 guessNumber();
+
+totalScore = totalScore + count;
+
+// console.log('QUESTION SIX TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
+
 
 //function question 7: adding question with array and a loop of 6 attempts, display all the right answers,
 
-function favouriteBook() {
+var potterHarry = ['adventure', 'harry potter', 'jk rowling', 'magical', 'magic', 'mystery', 'murder', 'detective series', 'investigative', 'fairytales', 'fantasy'];
 
-  var potterHarry = ['potter books', 'harry potter', 'jk rowling', 'magical', 'magic', 'mystery', 'rowling', 'harry potter series'];
+function favouriteBook() {
   
   //prompt them to guess my favorite type of book for tal 6 attempts
+
   for (var a = 0; a < 6; a++) {
     var guessBook = prompt('What type of books do I like?');
     guessBook = guessBook.toLowerCase();
@@ -182,42 +243,53 @@ function favouriteBook() {
   
       if (guessBook === potterHarry[i]) {
         //console.log('You are right!');
-        totalScore = totalScore + 1;
         alert('You are right!'); 
         a = 6;
-        return totalScore;
-  
+        count = 1;
+        return count;
       }
   
     }
     // display how many attempts are remaining
     if (a < 6) {
-      var count = 5 - a
-      alert('Try again!!!! You have ' + count + ' attempts remaining');
+      var countdown = 5 - a
+      alert('Try again!!!! You have ' + countdown + ' attempts remaining');
+      count = 0;
+
     } else {
       //complete the loop
-      alert('Well done!!! ');
+      return count;
     }
   }
-  alert('Correct Answers are potter books, harry potter, jk rowling, magical, magic, mystery, rowling, harry potter series');
 
 }
+
 favouriteBook();
 
-// //display all the books in the array
-// for (var i = 0; i < potterHarry.length; i++) {
-//   var favBook = '';
-//   favBook = favBook + potterHarry[i];
-//   console.log("My favorite book is" + favBook);
-// }
+totalScore = totalScore + count;
+
+// console.log('QUESTION SEVEN TOTALSCORE: ', totalScore, 'AND COUNT: ', count);
 
 
-//display the percentage score
+//function to display all the books in the array
+var favBook = '';
+
+function displayFav () {
+  for (var i = 0; i < potterHarry.length; i++) {
+    favBook = favBook + "  " + potterHarry[i];
+  }
+  alert("My favorite books are " + favBook);
+  return favBook;
+}
+
+
+//function to display the percentage score
+
 function scorePercent() { 
-  var percent = totalScore/7*100 ;
- // alert("your percentage is " + math);
- console.log(totalScore);
- alert('You percent is ' + percent);
-  //return percent;
+  var percent = Math.round(totalScore/7*100);
+  alert('You scored ' + percent + ' percent in this game!');
+  return percent;
 }
 scorePercent();
+
+alert('Thank you, ' + askName + ' for playing this game today! You can read more about me on my page ! ');
