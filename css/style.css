@@ -74,6 +74,7 @@ h3 {
   font-family: cursive;
   font-size: 2rem;
   text-align: left;
+  word-spacing: 0.2em;
   color: rgba(12, 19, 82, 1); hsla(250,100%,0%,0.8);
   text-shadow: 2px 2px 4px whitesmoke;
   padding: 3rem;
@@ -99,9 +100,9 @@ div {
 }
 
 li:first-letter {
-  font-size: 150%;
+  font-size: 130%;
   font-style: cursive;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
 
