@@ -98,6 +98,14 @@ div {
   margin-left: 3em;
 }
 
+li:first-letter {
+  font-size: 150%;
+  font-style: cursive;
+  letter-spacing: 0.2em;
+}
+
+
+
 /* List styles */
 ul {
   list-style-type: circle;
