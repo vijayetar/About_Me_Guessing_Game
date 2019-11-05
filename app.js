@@ -2,16 +2,6 @@
 
 var totalScore;
 
-getName();
-birthCountry();
-myTraining();
-whenDog();
-hobBy();
-lanGuage();
-guessNumber();
-favouriteBook();
-scorePercent();
-
 //function get User name
 function getName() {
   var askName;
@@ -24,6 +14,8 @@ function getName() {
   //console.log('greeting',greetUser);
   
 }
+
+getName();
 
 
 //function question 1: where was I born?
@@ -43,6 +35,7 @@ function birthCountry() {
   }
 }
 
+birthCountry();
 
 //function question 2: where did I do my medical training?
 function myTraining() {
@@ -63,7 +56,7 @@ function myTraining() {
   }
 
 }
-
+myTraining();
 
 //function question 3: did I have my dog first?
 function whenDog() {
@@ -83,6 +76,8 @@ function whenDog() {
   }
 
 }
+
+whenDog();
 
 
 //function question 4: do I enjoy volunteering?
@@ -105,7 +100,7 @@ function hobBy() {
   }
 
 }
-
+hobBy();
 
 //function question 5: can I write/read Arabic?
 
@@ -126,7 +121,7 @@ function lanGuage() {
   }
 
 }
-
+lanGuage();
 
 //function question 6: guess a number in four attempts only
 
@@ -168,6 +163,8 @@ function guessNumber() {
   }
 
 }
+guessNumber();
+
 //function question 7: adding question with array and a loop of 6 attempts, display all the right answers,
 
 function favouriteBook() {
@@ -205,6 +202,7 @@ function favouriteBook() {
   alert('Correct Answers are potter books, harry potter, jk rowling, magical, magic, mystery, rowling, harry potter series');
 
 }
+favouriteBook();
 
 // //display all the books in the array
 // for (var i = 0; i < potterHarry.length; i++) {
@@ -222,4 +220,4 @@ function scorePercent() {
  alert('You percent is ' + percent);
   //return percent;
 }
-
+scorePercent();

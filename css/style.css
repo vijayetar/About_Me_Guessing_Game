@@ -73,10 +73,11 @@ div {
   font-family: monospace;
   font-size: 1.5rem;
   width: 40%;
-  margin: 3rem auto;
+  margin: 3rem 0rem 3rem 0rem;
   padding: 0.2em;
   text-align: left;
   float: right;
+  margin-left: 3em;
 }
 
 div>figcaption {
