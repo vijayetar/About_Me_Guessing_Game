@@ -62,11 +62,10 @@ h3 {
   padding: 3rem;
   margin: 2rem;
   width: 60%;
-  border: 10px double rgb(17, 14, 20);
   padding: 1rem;
   margin: 0.5em 0.5rem 0.5em 0.5rem;
   border-radius: 1em;
-  background-color: rgb(255, 187, 155,0.7);
+  background-color: rgb(255, 187, 155,0.8);
 
 }
 
@@ -82,7 +81,7 @@ div {
 }
 
 div>figcaption {
-  color: red;
+  color: darkgoldenrod;
   font-size: 75%;
   font-style: cursive;
 }
