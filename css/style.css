@@ -21,8 +21,9 @@ h1 {
   font-family: cursive;
   font-size: 3rem;
   text-align: center;
+  /*color: rgb(255, 187, 155,1);*/
   color: rgba(12, 19, 82, 0.8); hsla(250,100%,0%,0.8);
-  background-color: rgb(244,246,247);
+  background-color: rgb(255, 187, 155,0.8);
   border: 10px double rgb(17, 14, 20);
   padding: 2rem;
   margin: 1em 1rem 1em 1rem;
@@ -65,7 +66,7 @@ h3 {
   padding: 1rem;
   margin: 0.5em 0.5rem 0.5em 0.5rem;
   border-radius: 1em;
-  background-color: rgb(244,246,247);
+  background-color: rgb(255, 187, 155,0.7);
 
 }
 
