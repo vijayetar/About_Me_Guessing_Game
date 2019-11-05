@@ -4,13 +4,16 @@
 var totalScore = 0;
 var count = 0;
 
-
 //function get User name
 var askName;
 
 function getName() {
   askName = prompt("What is your name?");
   //console.log('user Name', askName);
+
+  while (askName === "") {
+    askName = prompt("What is your name? Please answer with letters!")
+  }
   
   //greet User
   alert("Hi there, " + askName + "! Welcome to the Guessing Game! You have to answer 7 questions right to get total Score of 7 ");
