@@ -35,7 +35,7 @@
 //   console.log('this is the correct answer', questionS[i].reply);
 //   console.log('this is the length of the array reply: ', questionS[i].reply.length);
 
-// //check if the answer matches our array
+// // /////////////check if the answer matches our array
 //     for (var j = 0; j < questionS[i].reply.length; j++) {
 //       if (answer === questionS[i].reply[j]){
 //         console.log('You did it');
