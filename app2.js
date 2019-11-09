@@ -27,87 +27,87 @@ function getName() {
 
 getName();
 
-// Begin asking questions with array and compare answers to array of answers
+// // Begin asking questions with array and compare answers to array of answers
 
-var ansYes = ['yes', 'y', 'yeah'];
-var ansNo = ['no', 'n', 'nope'];
-var reply = '';
+// var ansYes = ['yes', 'y', 'yeah'];
+// var ansNo = ['no', 'n', 'nope'];
+// var reply = '';
 
-//List of questions as functions with reply as a function within a function
+// //List of questions as functions with reply as a function within a function
 
-function getAnswer() {
-  reply = prompt('Answer yes/no');
-  reply = reply.toLowerCase();
-  console.log('The reply IN THE FUNCTION IS', reply);
-}
+// function getAnswer() {
+//   reply = prompt('Answer yes/no');
+//   reply = reply.toLowerCase();
+//   console.log('The reply IN THE FUNCTION IS', reply);
+// }
 
-function questionOne() {
-  alert("Was I born in India?");
-  getAnswer();
-  return reply;
-}
+// function questionOne() {
+//   alert("Was I born in India?");
+//   getAnswer();
+//   return reply;
+// }
 
-function questionTwo() {
-  alert("Was I trained in New Zealand?");
-  getAnswer();
-  return reply;
-}
+// function questionTwo() {
+//   alert("Was I trained in New Zealand?");
+//   getAnswer();
+//   return reply;
+// }
 
-function questionThree() {
-  alert("Is it true that I had my dog before I had my kids?");
-  getAnswer();
-  return reply;
-}
+// function questionThree() {
+//   alert("Is it true that I had my dog before I had my kids?");
+//   getAnswer();
+//   return reply;
+// }
 
-function questionFour() {
-  alert("Do I enjoy volunteering?");
-  getAnswer();
-  return reply;
+// function questionFour() {
+//   alert("Do I enjoy volunteering?");
+//   getAnswer();
+//   return reply;
 
-}
+// }
 
-function questionFive() {
-  alert("Can I read and write Spanish?");
-  getAnswer();
-  return reply;
+// function questionFive() {
+//   alert("Can I read and write Spanish?");
+//   getAnswer();
+//   return reply;
 
-}
+// }
 
-// made an array of objects with array within in
+// // made an array of objects with array within in
 
-var allQuestions = [{question: questionOne, answer: ansYes }, { question: questionTwo, answer: ansYes }, { question: questionThree, answer: ansYes }, { question: questionFour, answer: ansYes }, { question: questionFive, answer: ansNo }];
+// var allQuestions = [{question: questionOne, answer: ansYes }, { question: questionTwo, answer: ansYes }, { question: questionThree, answer: ansYes }, { question: questionFour, answer: ansYes }, { question: questionFive, answer: ansNo }];
 
-//This is the first loop to run through the first five questions
-for (var i = 0; i < allQuestions.length; i++) {
-    //console.log(i);
-    allQuestions[i].question();
-    // reply = prompt('Answer yes/no');
-    // reply = reply.toLowerCase();
-    //console.log('The reply TO USE LATER', reply);
-    //console.log('All correct answers are ', allQuestions[i].answer);
+// //This is the first loop to run through the first five questions
+// for (var i = 0; i < allQuestions.length; i++) {
+//     //console.log(i);
+//     allQuestions[i].question();
+//     // reply = prompt('Answer yes/no');
+//     // reply = reply.toLowerCase();
+//     //console.log('The reply TO USE LATER', reply);
+//     //console.log('All correct answers are ', allQuestions[i].answer);
     
-    //Create second loop to check the correct answer
-    for (var j = 0; j < allQuestions[i].answer.length; j++) {
-      var correctAns = allQuestions[i].answer[j];
-      // console.log(reply, correctAns);
-      if (reply === correctAns) {
-        // console.log('You did it');
-        alert('You are absolutely right!');
-        count = 1;
-        j = 6;
-      } 
-    }
-    //console.log('my variable i', i, 'my variable j', j);
-    if (j !== 7) {
-      // console.log('Wrong answer!')
-      alert('Wrong Answer!!!');
-      count = 0;
-    }
-  totalScore = totalScore + count;
-  console.log('this is the count = ', count, 'this is the totalScore ', totalScore);
+//     //Create second loop to check the correct answer
+//     for (var j = 0; j < allQuestions[i].answer.length; j++) {
+//       var correctAns = allQuestions[i].answer[j];
+//       // console.log(reply, correctAns);
+//       if (reply === correctAns) {
+//         // console.log('You did it');
+//         alert('You are absolutely right!');
+//         count = 1;
+//         j = 6;
+//       } 
+//     }
+//     //console.log('my variable i', i, 'my variable j', j);
+//     if (j !== 7) {
+//       // console.log('Wrong answer!')
+//       alert('Wrong Answer!!!');
+//       count = 0;
+//     }
+//   totalScore = totalScore + count;
+//   console.log('this is the count = ', count, 'this is the totalScore ', totalScore);
     
   
-}
+// }
 
 //function question 6: guess a number in four attempts only
 
@@ -117,7 +117,18 @@ function guessNumber() {
     //prompt them a question which number
     var pickNumber = prompt("Please pick a number between 1-20 to guess how many homes I have moved in my life thus far?");
 
-    console.log('Number of homes I have moved: ', pickNumber);
+    //console.log('Number of homes I have moved: ', pickNumber);
+
+    while (pickNumber === '' || pickNumber >20 || isNaN(pickNumber)) {
+      //console.log('this is my typeof', typeof pickNumber);
+      pickNumber = prompt("Please pick a number between 1-20 to guess how many homes I have moved. Please enter only a number that is less than 20!");
+    }
+
+    // while (isNaN(pickNumber)) {
+    //   console.log('it worked');
+    //   pickNumber = prompt("Please enter a number only!");
+    // }
+    
 
     if (pickNumber === '13') {
       //console.log('pickNumber', pickNumber);
@@ -145,8 +156,10 @@ function guessNumber() {
           alert("Too Low! Try Again!! You have " + a + 'attempts remaining!');
         }
         else {
-          var a = 3 - i;
-          alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
+          if (pickNumber > 13 && pickNumber <20) {
+            var a = 3 - i;
+            alert('Too High! Try Again!! You have ' + a + 'attempts remaining!');
+          }
         }
       }
 
@@ -176,9 +189,13 @@ function favouriteBook() {
 
   for (var a = 0; a < 6; a++) {
     var guessBook = prompt('What type of books do I like?');
+
+    while(guessBook === '') {
+      guessBook = prompt('Please enter what type of books you think I enjoy reading');
+    }
     guessBook = guessBook.toLowerCase();
 
-    console.log('What type of books I like: ', guessBook);
+    //console.log('What type of books I like: ', guessBook);
     // check the answer provided against each element in the array
     for (var i = 0; i < potterHarry.length; i++) {
 
@@ -226,13 +243,14 @@ function displayFav() {
   alert("My favorite books are " + favBook);
   return favBook;
 }
+displayFav();
 
 
 //function to display the percentage score from the totalScore
 
 function scorePercent() {
   var percent = Math.round(totalScore / 7 * 100);
-  alert('You scored ' + percent + ' percent in this game!');
+  alert('You got ' + totalScore + ' answers correct out of 7. You scored ' + percent + ' percent in this game!');
   return percent;
 }
 scorePercent();
