@@ -27,87 +27,87 @@ function getName() {
 
 getName();
 
-// // Begin asking questions with array and compare answers to array of answers
+// Begin asking questions with array and compare answers to array of answers
 
-// var ansYes = ['yes', 'y', 'yeah'];
-// var ansNo = ['no', 'n', 'nope'];
-// var reply = '';
+var ansYes = ['yes', 'y', 'yeah'];
+var ansNo = ['no', 'n', 'nope'];
+var reply = '';
 
-// //List of questions as functions with reply as a function within a function
+//List of questions as functions with reply as a function within a function
 
-// function getAnswer() {
-//   reply = prompt('Answer yes/no');
-//   reply = reply.toLowerCase();
-//   console.log('The reply IN THE FUNCTION IS', reply);
-// }
+function getAnswer() {
+  reply = prompt('Answer yes/no');
+  reply = reply.toLowerCase();
+  console.log('The reply IN THE FUNCTION IS', reply);
+}
 
-// function questionOne() {
-//   alert("Was I born in India?");
-//   getAnswer();
-//   return reply;
-// }
+function questionOne() {
+  alert("Was I born in India?");
+  getAnswer();
+  return reply;
+}
 
-// function questionTwo() {
-//   alert("Was I trained in New Zealand?");
-//   getAnswer();
-//   return reply;
-// }
+function questionTwo() {
+  alert("Was I trained in New Zealand?");
+  getAnswer();
+  return reply;
+}
 
-// function questionThree() {
-//   alert("Is it true that I had my dog before I had my kids?");
-//   getAnswer();
-//   return reply;
-// }
+function questionThree() {
+  alert("Is it true that I had my dog before I had my kids?");
+  getAnswer();
+  return reply;
+}
 
-// function questionFour() {
-//   alert("Do I enjoy volunteering?");
-//   getAnswer();
-//   return reply;
+function questionFour() {
+  alert("Do I enjoy volunteering?");
+  getAnswer();
+  return reply;
 
-// }
+}
 
-// function questionFive() {
-//   alert("Can I read and write Spanish?");
-//   getAnswer();
-//   return reply;
+function questionFive() {
+  alert("Can I read and write Spanish?");
+  getAnswer();
+  return reply;
 
-// }
+}
 
-// // made an array of objects with array within in
+// made an array of objects with array within in
 
-// var allQuestions = [{question: questionOne, answer: ansYes }, { question: questionTwo, answer: ansYes }, { question: questionThree, answer: ansYes }, { question: questionFour, answer: ansYes }, { question: questionFive, answer: ansNo }];
+var allQuestions = [{question: questionOne, answer: ansYes }, { question: questionTwo, answer: ansYes }, { question: questionThree, answer: ansYes }, { question: questionFour, answer: ansYes }, { question: questionFive, answer: ansNo }];
 
-// //This is the first loop to run through the first five questions
-// for (var i = 0; i < allQuestions.length; i++) {
-//     //console.log(i);
-//     allQuestions[i].question();
-//     // reply = prompt('Answer yes/no');
-//     // reply = reply.toLowerCase();
-//     //console.log('The reply TO USE LATER', reply);
-//     //console.log('All correct answers are ', allQuestions[i].answer);
+//This is the first loop to run through the first five questions
+for (var i = 0; i < allQuestions.length; i++) {
+    //console.log(i);
+    allQuestions[i].question();
+    // reply = prompt('Answer yes/no');
+    // reply = reply.toLowerCase();
+    //console.log('The reply TO USE LATER', reply);
+    //console.log('All correct answers are ', allQuestions[i].answer);
     
-//     //Create second loop to check the correct answer
-//     for (var j = 0; j < allQuestions[i].answer.length; j++) {
-//       var correctAns = allQuestions[i].answer[j];
-//       // console.log(reply, correctAns);
-//       if (reply === correctAns) {
-//         // console.log('You did it');
-//         alert('You are absolutely right!');
-//         count = 1;
-//         j = 6;
-//       } 
-//     }
-//     //console.log('my variable i', i, 'my variable j', j);
-//     if (j !== 7) {
-//       // console.log('Wrong answer!')
-//       alert('Wrong Answer!!!');
-//       count = 0;
-//     }
-//   totalScore = totalScore + count;
-//   console.log('this is the count = ', count, 'this is the totalScore ', totalScore);
+    //Create second loop to check the correct answer
+    for (var j = 0; j < allQuestions[i].answer.length; j++) {
+      var correctAns = allQuestions[i].answer[j];
+      // console.log(reply, correctAns);
+      if (reply === correctAns) {
+        // console.log('You did it');
+        alert('You are absolutely right!');
+        count = 1;
+        j = 6;
+      } 
+    }
+    //console.log('my variable i', i, 'my variable j', j);
+    if (j !== 7) {
+      // console.log('Wrong answer!')
+      alert('Wrong Answer!!!');
+      count = 0;
+    }
+  totalScore = totalScore + count;
+  console.log('this is the count = ', count, 'this is the totalScore ', totalScore);
     
   
-// }
+}
 
 //function question 6: guess a number in four attempts only
 

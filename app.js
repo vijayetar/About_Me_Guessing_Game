@@ -330,7 +330,12 @@ function guessNumber() {
     //prompt them a question which number
     var pickNumber = prompt("Please pick a number between 1-20 to guess how many homes I have moved in my life thus far?");
 
-    console.log('Number of homes I have moved: ', pickNumber);
+    //console.log('Number of homes I have moved: ', pickNumber);
+
+    while (pickNumber === '' || pickNumber >20 || isNaN(pickNumber)) {
+      //console.log('this is my typeof', typeof pickNumber);
+      pickNumber = prompt("Please pick a number between 1-20 to guess how many homes I have moved. Please enter only a number that is less than 20!");
+    }
 
     if (pickNumber === '13') {
       //console.log('pickNumber', pickNumber);
@@ -437,13 +442,13 @@ function displayFav() {
   alert("My favorite books are " + favBook);
   return favBook;
 }
-
+displayFav();
 
 //function to display the percentage score from the totalScore
 
 function scorePercent() {
   var percent = Math.round(totalScore / 7 * 100);
-  alert('You scored ' + percent + ' percent in this game!');
+  alert('You got ' + totalScore + ' answers correct out of 7. You scored ' + percent + ' percent in this game!');
   return percent;
 }
 scorePercent();
