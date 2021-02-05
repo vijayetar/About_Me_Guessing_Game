@@ -1,7 +1,10 @@
 # About_Me_Guessing_Game
 
+adding edit here on git hub to test pull abilit
+
 /////////////////////// testing on master
 ///// testing on branch now (i believe)
+
 
 This is a guessing game about me required as part of Lab 02, course 201
 
